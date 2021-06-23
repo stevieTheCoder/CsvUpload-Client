@@ -23,9 +23,16 @@ export default function uploadCsvService(file) {
       });
     })
     .then((response) => {
-      toast(`Uploaded ${response} readings successfully`, {
-        type: "success",
-      });
+      toast(
+        <div>
+          {response.successful} records successfully updated
+          <br />
+          {response.failed} records failed to update
+        </div>,
+        {
+          type: "success",
+        }
+      );
     })
     .catch((error) => {
       toast(`${error}`, {
