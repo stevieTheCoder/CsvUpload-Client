@@ -5,10 +5,6 @@ const navigation = [
   { name: "Upload Meter Readings", href: "/", current: true },
 ];
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
-
 export default function Index() {
   return (
     <Layout navigation={navigation} title={"Upload Meter Readings"}>
